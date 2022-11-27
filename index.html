@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="de">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Ökostream</title>
-        
         <link rel="stylesheet" href="css\bootstrap.css">
         <link rel="stylesheet" href="css\style.css">
         <style>
@@ -42,16 +43,80 @@
             </div>
         </header>
         <main>
-            <div class="container-fluid">
-                <ul class="nav flex-column">
-                    <li class="nav-item"><a href="#">Start</a></li>
-                    <li class="nav-item"><a href="#">Tabelle</a></li>
-                    <li class="nav-item"><a href="#">Rechtliche Hinweise</a></li>
-                </ul>    
+            <div class="dropdown hintergrund">
+                <button class="btn btn-own dropdown-toggle my-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">Menü</button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Start</a></li>
+                  <li><a class="dropdown-item" href="#">Tabelle</a></li>
+                  <li><a class="dropdown-item" href="#">Ende</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col">Nr.</th>
+                                <th scope="col">Land</th>
+                                <th scope="col">Unternehmen</th>
+                                <th scope="col">Emissionswert kT/Jahr</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-group-divider">
+                            <tr>
+                                <td scope="row">1</td>
+                                <td>Deutschland</td>
+                                <td>Robert Bosch GmbH</td>
+                                <td>1000</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">2</td>
+                                <td>Deutschland</td>
+                                <td>Arcelor Mittal GmbH</td>
+                                <td>2000</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">3</td>
+                                <td>Deutschland</td>
+                                <td>BMW AG</td>
+                                <td>800</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">4</td>
+                                <td>USA</td>
+                                <td>Robert Bosch GmbH</td>
+                                <td>1200</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">5</td>
+                                <td>USA</td>
+                                <td>BMW AG</td>
+                                <td>1100</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">6</td>
+                                <td>Indien</td>
+                                <td>Arcelor Mittal GmbH</td>
+                                <td>2500</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">7</td>
+                                <td>Deutschland</td>
+                                <td>Audi AG</td>
+                                <td>900</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">8</td>
+                                <td>USA</td>
+                                <td>Audi AG</td>
+                                <td>1000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                  </div>
             </div>
         </main>
-        <footer>
-            rechtliche Hinweise
-        </footer>
+    <script src="node_modules\@popperjs\core\dist\umd\popper.min.js"></script>
+    <script src="node_modules\bootstrap\dist\js\bootstrap.min.js"></script>    
     </body>
 </html>
