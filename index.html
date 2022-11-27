@@ -1,48 +1,57 @@
 <!DOCTYPE html>
 <html lang="de">
     <head>
-        <title>CO²-Footprint</title>
+        <title>Ökostream</title>
+        
         <link rel="stylesheet" href="css\bootstrap.css">
-        <style type="text/css">
+        <link rel="stylesheet" href="css\style.css">
+        <style>
             header {
-                background-image: url("pictures/Hintergrund.jpg");
+                background-image: url("pictures/industry-gaae6eb33a_1920.jpg");
                 border-top: 0.2rem solid black;
                 border-bottom: 0.2rem solid black;
             }
-            header div nav div {
-                background-image: url("pictures/Hintergrund2.jpg");
-                border: 5px solid black;
-                border-radius: 2mm;
-            }                        
         </style>
     </head>
-    <body class="body">
+    <body>
         <header>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-12 col-lg-3 px-2 py-2">
-                        <img src="pictures\Logo.jpg" height="100" width="500" class="img-fluid" alt="Bild fehlerhaft">
-                    </div>
-                    <div class="col-sm-12 col-lg-3 px-1 py-1">
-                        <nav class="navbar navbar-dark navbar-expand-lg">
-                            <div class="container-fluid">
-                                <span class="navbar-brand mb-0 h1">Social Media</span>
-                                <ul class="nav">
-                                    <li class="d-inline"><a class="nav-link" href="link1">link1</a></li>
-                                    <li class="d-inline"><a class="nav-link" href="link2">link2</a></li>
-                                    <li class="d-inline"><a class="nav-link" href="link3">link3</a></li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
+                    <nav class="navbar justify-content-betrween">
+                        <div class="container-fluid col-sm-12 col-lg-2 px-3">
+                            <a class="navbar-brand" href="organisationswebsite.html">
+                                <img src="pictures\Logo.png" class="py-2" height="100" width="100" class="img-fluid" alt="Bild fehlerhaft">
+                                <text class="ueberschriftenklein px-2">Ökostream</text>
+                            </a>
+                        </div>
+                        <div class="container-fluid col-sm-12 col-lg-4 px-3">
+                            <form class="d-flex" role="search">
+                              <input class="form-control me-2" type="search" placeholder="Suchen" aria-label="Search">
+                              <button class="btn btn-outline-own" type="submit">Suchen</button>
+                            </form>
+                        </div>
+                        <div class="container-fluid col-sm-12 col-lg-4 justify-content-end">
+                            <ul class="nav">
+                                <li class="d-inline col-sm-4 col-lg-4 px-3"><a class="nav-link" href="link1"><img src="pictures\facebook.png" alt="Facebook" width="40" height="40"></a></li>
+                                <li class="d-inline col-sm-4 col-lg-4 px-3"><a class="nav-link" href="link2"><img src="pictures\instagram.png" alt="Instagram" width="40" height="40"></a></li>
+                                <li class="d-inline col-sm-4 col-lg-4 px-3"><a class="nav-link" href="link3"><img src="pictures\twitter.png" alt="Twitter" width="40" height="40"></a></li>
+                            </ul>
+                        </div>
+                    </nav>    
                 </div>
             </div>
         </header>
         <main>
-            noch in Arbeit
+            <div class="container-fluid">
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="#">Start</a></li>
+                    <li class="nav-item"><a href="#">Tabelle</a></li>
+                    <li class="nav-item"><a href="#">Rechtliche Hinweise</a></li>
+                </ul>    
+            </div>
         </main>
         <footer>
-            noch in Arbeit
+            rechtliche Hinweise
         </footer>
     </body>
 </html>
