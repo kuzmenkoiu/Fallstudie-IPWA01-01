@@ -29,5 +29,5 @@ function ausgeben() {
          }
     }    
 }
-document.addEventListener('DOMContentLoaded', init);
+
 
