@@ -32,6 +32,8 @@ var Tabellenarray = new Array();
     Tabellenarray[5] = ["Indien",      "Arcelor Mittal GmbH",  "2500"];
     Tabellenarray[6] = ["Deutschland", "Audi AG",              "900"];
     Tabellenarray[7] = ["USA",         "Audi AG",              "1000"];
+    Tabellenarray[8] = ["Russland",    "BMW AG",               "1400"];
+    Tabellenarray[9] = ["China",       "Robert Bosch GmbH",    "1800"];
 
 
 function init() {
@@ -42,21 +44,19 @@ function init() {
 
 function ausgeben() {
     var m;
-    var i;
-    var j;
+    var i = 0;
+    var j = 0;
 	var Zellenwert;
 	var ausgabe;
     for (m = 1; m <= document.getElementsByTagName("td").length; m++ ) {
-        i = 0;
-        j = 0;
         Zellenwert = Tabellenarray[i][j];
         ausgabe = document.getElementById("ausgabe" + m);
         ausgabe.innerHTML = Zellenwert;
-         if (j > 2) {
-            i++;
-            j - 2;   
+         if (j < 2) {
+            j++;  
          } else {
-            j++
+            i++;
+            j=j-2;
          }
     }    
 }
