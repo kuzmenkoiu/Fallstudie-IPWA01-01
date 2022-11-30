@@ -1,27 +1,3 @@
-class Tabelleneintrag {
-    land;
-    unternehmen;
-    emissionswert;
-
-    constructor (landname, unternehmensname, emission) {
-        this.land = landname;
-        this.unternehmen = unternehmensname;
-        this.emissionswert = emission;
-    }
-
-    get landAusgeben () {
-        return landname;
-    }
-
-    get unternehmenAusgeben () {
-        return unternehmensname;
-    }
-
-    get emissionAusgeben () {
-        return emission;
-    }
-}
-
 var Tabellenarray = new Array();
 
     Tabellenarray[0] = ["Deutschland", "Robert Bosch GmbH",    "1000"];
@@ -34,13 +10,6 @@ var Tabellenarray = new Array();
     Tabellenarray[7] = ["USA",         "Audi AG",              "1000"];
     Tabellenarray[8] = ["Russland",    "BMW AG",               "1400"];
     Tabellenarray[9] = ["China",       "Robert Bosch GmbH",    "1800"];
-
-
-function init() {
-	var elem = document.getElementById('button');
-	elem.addEventListener('click', ausgeben);
-}
-
 
 function ausgeben() {
     var m;
