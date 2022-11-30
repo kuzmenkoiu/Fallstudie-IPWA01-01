@@ -53,6 +53,15 @@
                 </ul>
             </div>
             <div>
+                <div class="row hintergrund">
+                    <div class="col-sm-12 col-lg-3 py-2 px-3">Hier Land auswählen:
+                        <select class="form-select form-select-sm" aria-label="Default select example" id="land">
+                        </select>
+                    </div>
+                    <div class="col-sm-12 col-lg-3 py-2 px-3">Hier Unternehmen auswählen:    
+                        <select class="form-select form-select-sm" id="unternehmen"></select>
+                    </div>
+                </div>
                 <div class="table-responsive col-sm-12 col-lg-12">
                     <table class="table table-striped">
                         <thead class="table-dark">
@@ -120,6 +129,22 @@
         </main>
     <script src="node_modules\@popperjs\core\dist\umd\popper.min.js"></script>
     <script src="node_modules\bootstrap\dist\js\bootstrap.min.js"></script>   
-    <script src="js\Tabelleneintrag.js"></script>  
+    <script src="node_modules\jquery\dist\jquery.min.js"></script> 
+    <script src="js\Tabelleneintrag.js"></script>
+    <script>
+        var auswahlland = "";
+        var zwischenarray1  = Array.from(new Set(Filterarray[0]));
+        for (var i = 0; i <= zwischenarray1.length - 1; i++) {
+            auswahlland += '<option value="' + zwischenarray1[i] + '">' + zwischenarray1[i] + "</options>";
+        }
+        document.getElementById("land").innerHTML = auswahlland;
+
+        var auswahlunternehmen = "";
+        var zwischenarray2  = Array.from(new Set(Filterarray[1]));
+        for (var j = 0; j <= zwischenarray2.length - 1; j++) {
+            auswahlunternehmen += '<option value="' + zwischenarray2[j] + '">' + zwischenarray2[j] + "</options>";
+        }
+        document.getElementById("unternehmen").innerHTML = auswahlunternehmen;
+    </script> 
     </body>
 </html>
