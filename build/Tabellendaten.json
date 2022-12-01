@@ -1,0 +1,55 @@
+[
+    {
+        "land": "Deutschland",
+        "unternehmen": "Robert Bosch GmbH",
+        "emission": "1000"
+    },
+
+    {
+        "land": "Deutschland",
+        "unternehmen": "Arcelor Mittal GmbH",
+        "emission": "2000"
+    },
+
+    {
+        "land": "Deutschland",
+        "unternehmen": "BMW AG",
+        "emission": "800"
+    },
+
+    {
+        "land": "USA",
+        "unternehmen": "Robert Bosch GmbH",
+        "emission": "1200"
+    },
+
+    {
+        "land": "USA",
+        "unternehmen": "BMW AG",
+        "emission": "1100"
+    },
+
+    {
+        "land": "Indien",
+        "unternehmen": "Arcelor Mittal GmbH",
+        "emission": "2500"
+    },
+
+    {
+        "land": "Deutschland",
+        "unternehmen": "Audi AG",
+        "emission": "900"
+    },
+
+    {
+        "land": "USA",
+        "unternehmen": "Audi AG",
+        "emission": "1000"
+    },
+
+    {
+        "land": "Russland",
+        "unternehmen": "Audi AG",
+        "emission": "1400"
+    }
+]

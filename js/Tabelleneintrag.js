@@ -57,4 +57,8 @@ function ausgeben() {
     }    
 }
 
-
+/*
+const response = await fetch("build/Tabellendaten.json")
+const json = await response.json()
+json
+*/
