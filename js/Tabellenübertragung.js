@@ -1,11 +1,17 @@
-const jsondaten = await fetch("build/Tabellendaten.json");
-const daten = await jsondaten.json();
-daten
-
-function ausgeben() {
-var ausgabe = document.getElementById("ausgabe1");
-ausgabe.innerHTML = daten;
-}
+fetch("build/Tabellendaten.json")
+.then((response) => {
+  return response.json();
+})
+.then((rowdata) => {
+  const container = document.getElementById("tabellenzeile");
+  rowdata.forEach((dataset) => {
+    const tmpl = document.getElementById("tabellenzeilen-temp").content.cloneNode(true);
+    tmpl.querySelector(".land").innerHTML = dataset.land;
+    tmpl.querySelector(".unternehmen").innerHTML = dataset.unternehmen;
+    tmpl.querySelector(".emission").innerHTML = dataset.emission;
+    container.appendChild(tmpl);
+  });
+});
 
 
 

@@ -15,7 +15,7 @@
             }
         </style>
     </head>
-    <body onload="ausgeben()">
+    <body>
         <header>
             <div class="container-fluid">
                 <div class="row">
@@ -55,14 +55,22 @@
             <div>
                 <div class="row hintergrund">
                     <div class="col-sm-12 col-lg-3 py-2 px-3">Hier Land auswählen:
-                        <select class="form-select form-select-sm" aria-label="Default select example" id="land">
+                        <select class="form-select form-select-sm" aria-label="Default select example" id="landfilter">
+                            <option value="1"></option>
                         </select>
                     </div>
                     <div class="col-sm-12 col-lg-3 py-2 px-3">Hier Unternehmen auswählen:    
-                        <select class="form-select form-select-sm" id="unternehmen"></select>
+                        <select class="form-select form-select-sm" id="unternehmenfilter"></select>
                     </div>
                 </div>
                 <div class="table-responsive col-sm-12 col-lg-12">
+                    <template  id="tabellenzeilen-temp">
+                        <tr>
+                            <td class="land"></td>
+                            <td class="unternehmen"></td>
+                            <td class="emission"></td>
+                        </tr>
+                    </template>
                     <table class="table table-striped">
                         <thead class="table-dark">
                             <tr>
@@ -71,57 +79,7 @@
                                 <th scope="col">Emissionswert kT/Jahr</th>
                             </tr>
                         </thead>
-                        <tbody class="table-group-divider">
-                            <tr>
-                                <td id="ausgabe1"></td>
-                                <td id="ausgabe2"></td>
-                                <td id="ausgabe3"></td>
-                            </tr>
-                            <tr>
-                                <td id="ausgabe4"></td>
-                                <td id="ausgabe5"></td>
-                                <td id="ausgabe6"></td>
-                            </tr>
-                            <tr>
-                                <td id="ausgabe7"></td>
-                                <td id="ausgabe8"></td>
-                                <td id="ausgabe9"></td>
-                            </tr>
-                            <tr>
-                                <td id="ausgabe10"></td>
-                                <td id="ausgabe11"></td>
-                                <td id="ausgabe12"></td>
-                            </tr>
-                            <tr>
-                                <td id="ausgabe13"></td>
-                                <td id="ausgabe14"></td>
-                                <td id="ausgabe15"></td>
-                            </tr>
-                            <tr>
-                                <td id="ausgabe16"></td>
-                                <td id="ausgabe17"></td>
-                                <td id="ausgabe18"></td>
-                            </tr>
-                            <tr>
-                                <td id="ausgabe19"></td>
-                                <td id="ausgabe20"></td>
-                                <td id="ausgabe21"></td>
-                            </tr>
-                            <tr>
-                                <td id="ausgabe22"></td>
-                                <td id="ausgabe23"></td>
-                                <td id="ausgabe24"></td>
-                            </tr>
-                            <tr>
-                                <td id="ausgabe25"></td>
-                                <td id="ausgabe26"></td>
-                                <td id="ausgabe27"></td>
-                            </tr>
-                            <tr>
-                                <td id="ausgabe28"></td>
-                                <td id="ausgabe29"></td>
-                                <td id="ausgabe30"></td>
-                            </tr>
+                        <tbody class="table-group-divider" id="tabellenzeile">
                         </tbody>
                     </table>
                   </div>
@@ -131,20 +89,7 @@
     <script src="node_modules\bootstrap\dist\js\bootstrap.min.js"></script>   
     <script src="node_modules\jquery\dist\jquery.min.js"></script> 
     <script src="js\Tabellenübertragung.js"></script>
-    <script>
-        var auswahlland = "";
-        var zwischenarray1  = Array.from(new Set(Filterarray[0]));
-        for (var i = 0; i <= zwischenarray1.length - 1; i++) {
-            auswahlland += '<option value="' + zwischenarray1[i] + '">' + zwischenarray1[i] + "</options>";
-        }
-        document.getElementById("land").innerHTML = auswahlland;
-
-        var auswahlunternehmen = "";
-        var zwischenarray2  = Array.from(new Set(Filterarray[1]));
-        for (var j = 0; j <= zwischenarray2.length - 1; j++) {
-            auswahlunternehmen += '<option value="' + zwischenarray2[j] + '">' + zwischenarray2[j] + "</options>";
-        }
-        document.getElementById("unternehmen").innerHTML = auswahlunternehmen;
-    </script> 
+    <script src="js\Filterauswahl.js"></script>
+    <script src="js\Filterfunktion.js"></script>
     </body>
 </html>
