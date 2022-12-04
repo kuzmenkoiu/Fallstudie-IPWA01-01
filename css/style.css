@@ -84,3 +84,18 @@
     --bs-btn-disabled-bg: #6c757d;
     --bs-btn-disabled-border-color: #6c757d; 
   }
+
+  .linkdesign {
+    color: #000000;
+    text-decoration: none;
+  }
+
+  .link-own {
+    display: block;
+    padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  }

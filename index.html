@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de" dir="auto">
+<html lang="de">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,6 +12,11 @@
                 background-image: url("pictures/industry-gaae6eb33a_1920.jpg");
                 border-top: 0.2rem solid black;
                 border-bottom: 0.2rem solid black;
+            }
+            footer {
+                background-image: url("pictures/forest-gcce27dc61_1920.jpg");
+                border-top: 0.2rem solid black;
+                border-bottom: 0.2rem solid black; 
             }
         </style>
     </head>
@@ -54,16 +59,31 @@
             </div>
             <div>
                 <div class="row hintergrund">
-                    <div class="col-sm-12 col-lg-3 py-2 px-3">Hier Land auswählen:
-                        <select class="form-select form-select-sm" aria-label="Default select example" id="landfilter">
-                            <option value="1"></option>
-                        </select>
+                    <div class="col-sm-12 col-lg-3 px-3 py-2">
+                        <input type="text" class="form-control" id="formGroupExampleInput1" placeholder="Filterwert eintragen">
                     </div>
-                    <div class="col-sm-12 col-lg-3 py-2 px-3">Hier Unternehmen auswählen:    
-                        <select class="form-select form-select-sm" id="unternehmenfilter"></select>
+                    <div class="col-sm-12 col-lg-1 px-2 py-1">
+                        <Button class="btn btn-own"><a class="linkdesign" href="javascript:location.reload()">Filtern</a></Button>
+                    </div>
+                    <div class="col-sm-12 col-lg-3 px-3 py-2">
+                        <select class="form-select sortieroption" aria-label="Default select example">
+                            <option selected>Sortieroption wählen</option>
+                            <option value="A bis Z">A bis Z</option>
+                            <option value="Z bis A">Z bis A</option>
+                          </select>
+                    </div>
+                    <div class="col-sm-12 col-lg-3 px-3 py-2">
+                        <select class="form-select sortierwert" aria-label="Default select example">
+                            <option selected>Sortierwert</option>
+                            <option value="Land">Land</option>
+                            <option value="Unternehmen">Unternehmen</option>
+                          </select>
+                    </div>
+                    <div class="col-sm-12 col-lg-1 px-2 py-2">
+                        <Button class="btn btn-own"><a class="linkdesign" href="javascript:location.reload()">Sortieren</a></Button>
                     </div>
                 </div>
-                <div class="table-responsive col-sm-12 col-lg-12">
+                <div class="table-responsive col-sm-12 col-lg-12" id="tabelle">
                     <template  id="tabellenzeilen-temp">
                         <tr>
                             <td class="land"></td>
@@ -85,11 +105,17 @@
                   </div>
             </div>
         </main>
+        <footer>
+            <div class="container-fluid">
+                    <nav class="navbar">
+                        <div class="col-sm-12 col-lg-12 px-3 py-2"><a class="link-own" href="#">Impressum</a></div>
+                        <div class="col-sm-12 col-lg-12 px-3 py-2"><a class="link-own" href="#">Rechliche Hinweise</a></div>
+                        <div class="col-sm-12 col-lg-12 px-3 py-2"><a class="link-own" href="#">AGB</a></div>
+                    </nav>
+            </div>
+        </footer>
     <script src="node_modules\@popperjs\core\dist\umd\popper.min.js"></script>
     <script src="node_modules\bootstrap\dist\js\bootstrap.min.js"></script>   
-    <script src="node_modules\jquery\dist\jquery.min.js"></script> 
-    <script src="js\Tabellenübertragung.js"></script>
-    <script src="js\Filterauswahl.js"></script>
-    <script src="js\Filterfunktion.js"></script>
+    <script src="js\Datenübertragung.js"></script>
     </body>
 </html>
