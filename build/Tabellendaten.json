@@ -54,8 +54,50 @@
     },
 
     {
-        "land": "Russland",
+        "land": "China",
+        "unternehmen": "Siemens AG",
+        "emission": 1550
+    },
+
+    {
+        "land": "Italien",
         "unternehmen": "Audi AG",
-        "emission": 1400
+        "emission": 1380
+    },
+
+    {
+        "land": "Portugal",
+        "unternehmen": "Volkswagen AG",
+        "emission": 1160
+    },
+
+    {
+        "land": "Russland",
+        "unternehmen": "Volkswagen AG",
+        "emission": 1489
+    },
+
+    {
+        "land": "Deutschland",
+        "unternehmen": "Volkswagen AG",
+        "emission": 983
+    },
+
+    {
+        "land": "Italien",
+        "unternehmen": "BMW AG",
+        "emission": 1134
+    },
+
+    {
+        "land": "Frankreich",
+        "unternehmen": "Robert Bosch GmbH",
+        "emission": 1659
+    },
+
+    {
+        "land": "Portugal",
+        "unternehmen": "Arcelor Mittal GmbH",
+        "emission": 1211
     }
 ]
