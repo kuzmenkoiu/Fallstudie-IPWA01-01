@@ -9,11 +9,14 @@
         <link rel="stylesheet" href="css\style.css">
         <style>
             header {
+                width: 100%;
                 background-image: url("pictures/industry-gaae6eb33a_1920.jpg");
                 border-top: 0.2rem solid black;
                 border-bottom: 0.2rem solid black;
             }
+
             footer {
+                width: 100%;
                 background-image: url("pictures/forest-gcce27dc61_1920.jpg");
                 border-top: 0.2rem solid black;
                 border-bottom: 0.2rem solid black; 
@@ -21,7 +24,7 @@
         </style>
     </head>
     <body>
-        <header>
+        <header id="start">
             <div class="container-fluid">
                 <div class="row">
                     <nav class="navbar justify-content-betrween">
@@ -49,30 +52,35 @@
             </div>
         </header>
         <main>
-            <div class="dropdown hintergrund">
+            <div class="dropdown hintergrund sticky-top">
                 <button class="btn btn-own dropdown-toggle my-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">Menü</button>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Start</a></li>
-                  <li><a class="dropdown-item" href="#">Tabelle</a></li>
-                  <li><a class="dropdown-item" href="#">Ende</a></li>
+                  <li><a class="dropdown-item" href="#start">Start</a></li>
+                  <li><a class="dropdown-item" href="#tabelle">Tabelle</a></li>
+                  <li><a class="dropdown-item" href="#ende">Ende</a></li>
                 </ul>
             </div>
-            <div>
+            <div class="container-fluid hintergrund">
+                <div class="container-fluid ueberschrift">
+                    Auf dieser Webseite sind Länder und Unternehmen mit ihren Emissionswerten aufgelistet
+                </div>
+            </div>
+            <div class="container-fluid">
                 <div class="row hintergrund">
-                    <div class="col-sm-12 col-lg-3 px-3 py-2">
+                    <div class="col-sm-12 col-lg-3 px-2 py-2">
                         <input type="text" class="form-control" id="formGroupExampleInput1" placeholder="Filterwert eintragen">
                     </div>
                     <div class="col-sm-12 col-lg-1 px-2 py-1">
                         <Button class="btn btn-own"><a class="linkdesign" href="javascript:location.reload()">Filtern</a></Button>
                     </div>
-                    <div class="col-sm-12 col-lg-3 px-3 py-2">
+                    <div class="col-sm-12 col-lg-3 px-2 py-2">
                         <select class="form-select sortieroption" aria-label="Default select example">
                             <option selected>Sortieroption wählen</option>
                             <option value="A bis Z">A bis Z</option>
                             <option value="Z bis A">Z bis A</option>
                           </select>
                     </div>
-                    <div class="col-sm-12 col-lg-3 px-3 py-2">
+                    <div class="col-sm-12 col-lg-3 px-2 py-2">
                         <select class="form-select sortierwert" aria-label="Default select example">
                             <option selected>Sortierwert</option>
                             <option value="Land">Land</option>
@@ -105,11 +113,11 @@
                   </div>
             </div>
         </main>
-        <footer>
+        <footer id="ende">
             <div class="container-fluid">
                     <nav class="navbar">
                         <div class="col-sm-12 col-lg-12 px-3 py-2"><a class="link-own" href="#">Impressum</a></div>
-                        <div class="col-sm-12 col-lg-12 px-3 py-2"><a class="link-own" href="#">Rechliche Hinweise</a></div>
+                        <div class="col-sm-12 col-lg-12 px-3 py-2"><a class="link-own" href="#">Rechtliche Hinweise</a></div>
                         <div class="col-sm-12 col-lg-12 px-3 py-2"><a class="link-own" href="#">AGB</a></div>
                     </nav>
             </div>
