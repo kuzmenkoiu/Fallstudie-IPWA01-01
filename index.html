@@ -23,7 +23,7 @@
             }
         </style>
     </head>
-    <body>
+    <body onload=menüausrichtung()>
         <header id="start">
             <div class="container-fluid">
                 <div class="row">
@@ -52,13 +52,7 @@
             </div>
         </header>
         <main>
-            <div class="dropdown hintergrund sticky-top">
-                <button class="btn btn-own dropdown-toggle my-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">Menü</button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#start">Start</a></li>
-                  <li><a class="dropdown-item" href="#tabelle">Tabelle</a></li>
-                  <li><a class="dropdown-item" href="#ende">Ende</a></li>
-                </ul>
+            <div class="dropdown hintergrund sticky-top"  id="menüplatzierung">
             </div>
             <div class="container-fluid hintergrund">
                 <div class="container-fluid ueberschrift">
@@ -125,5 +119,6 @@
     <script src="node_modules\@popperjs\core\dist\umd\popper.min.js"></script>
     <script src="node_modules\bootstrap\dist\js\bootstrap.min.js"></script>   
     <script src="js\Datenübertragung.js"></script>
+    <script src="js\Menüausrichtung.js"></script>
     </body>
 </html>
