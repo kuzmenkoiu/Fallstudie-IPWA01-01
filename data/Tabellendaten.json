@@ -99,5 +99,47 @@
         "land": "Portugal",
         "unternehmen": "Arcelor Mittal GmbH",
         "emission": 1211
+    },
+
+    {
+        "land": "Spanien",
+        "unternehmen": "Glaströsch GmbH",
+        "emission": 1234
+    },
+
+    {
+        "land": "Norwegen",
+        "unternehmen": "NEL ASA AG",
+        "emission": 400
+    },
+
+    {
+        "land": "Russland",
+        "unternehmen": "Gazprom AG",
+        "emission": 1300
+    },
+
+    {
+        "land": "Norwegen",
+        "unternehmen": "ITM Power AG",
+        "emission": 645
+    },
+
+    {
+        "land": "USA",
+        "unternehmen": "Piedmont Lithium AG",
+        "emission": 1923
+    },
+
+    {
+        "land": "Indien",
+        "unternehmen": "ITM Power AG",
+        "emission": 608
+    },
+
+    {
+        "land": "Deutschland",
+        "unternehmen": "Gazprom AG",
+        "emission": 1444
     }
 ]

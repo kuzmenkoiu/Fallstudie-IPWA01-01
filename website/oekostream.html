@@ -34,9 +34,9 @@
                     <div class="col-sm-12 col-lg-6 px-1">
                         <nav class="navbar">
                             <ul class="nav">
-                                <li class="d-inline col-sm-4 col-lg-2 px-3"><a class="nav-design" href="#">Startseite</a></li>
-                                <li class="d-inline col-sm-4 col-lg-2 px-4"><a class="nav-design" href="#">Ökostream</a></li>
-                                <li class="d-inline col-sm-4 col-lg-2 px-3"><a class="nav-design" href="#">Kontakte</a></li>
+                                <li class="d-inline col-sm-4 col-lg-2 px-3"><a class="nav-design" href="..\website\startseite.html">Startseite</a></li>
+                                <li class="d-inline col-sm-4 col-lg-2 px-4"><a class="nav-design" href="..\website\oekostream.html">Ökostream</a></li>
+                                <li class="d-inline col-sm-4 col-lg-2 px-3"><a class="nav-design" href="..\website\kontakt.html">Kontakte</a></li>
                                 <li class="d-inline col-sm-4 col-lg-6 px-3">
                                     <form class="d-flex" role="search">
                                         <input class="form-control me-2" type="search" placeholder="Suchen" aria-label="Search">
@@ -48,9 +48,9 @@
                     </div>
                     <div class="col-sm-12 col-lg-3 px-5">
                         <ul class="nav justify-content-end">
-                            <li class="d-inline col-sm-4 col-lg-3 px-4"><a class="nav-link" href="#"><img src="..\img\facebook.png" alt="Facebook" width="40" height="40"></a></li>
-                            <li class="d-inline col-sm-4 col-lg-3 px-4"><a class="nav-link" href="#"><img src="..\img\instagram.png" alt="Instagram" width="40" height="40"></a></li>
-                            <li class="d-inline col-sm-4 col-lg-3 px-4"><a class="nav-link" href="#"><img src="..\img\twitter.png" alt="Twitter" width="40" height="40"></a></li>
+                            <li class="d-inline col-sm-4 col-lg-3 px-4"><a class="nav-link" href="https://de-de.facebook.com/"><img src="..\img\facebook.png" alt="Facebook" width="40" height="40"></a></li>
+                            <li class="d-inline col-sm-4 col-lg-3 px-4"><a class="nav-link" href="https://www.instagram.com/"><img src="..\img\instagram.png" alt="Instagram" width="40" height="40"></a></li>
+                            <li class="d-inline col-sm-4 col-lg-3 px-4"><a class="nav-link" href="https://twitter.com/"><img src="..\img\twitter.png" alt="Twitter" width="40" height="40"></a></li>
                         </ul>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
                     Auf dieser Webseite sind Länder und Unternehmen mit ihren Emissionswerten aufgelistet
                 </div>
             </div>
-            <div class="container-fluid">
+            <div class="container-fluid" id="start">
                 <div class="row hintergrund">
                     <div class="col-sm-12 col-lg-3 px-2 py-2">
                         <input type="text" class="form-control" id="formGroupExampleInput1" placeholder="Filterwert eintragen">
@@ -90,7 +90,7 @@
                         <Button class="btn btn-own"><a class="linkdesign" href="javascript:location.reload()">Sortieren</a></Button>
                     </div>
                 </div>
-                <div class="table-responsive col-sm-12 col-lg-12" id="tabelle">
+                <div class="table-responsive col-sm-12 col-lg-12">
                     <template  id="tabellenzeilen-temp">
                         <tr>
                             <td class="land"></td>
@@ -98,7 +98,7 @@
                             <td class="emission"></td>
                         </tr>
                     </template>
-                    <table class="table table-striped">
+                    <table class="table table-striped"  id="tabelle">
                         <thead class="table-dark">
                             <tr>
                                 <th scope="col">Land</th>
@@ -115,9 +115,9 @@
         <footer id="ende">
             <div class="container-fluid">
                     <nav class="navbar">
-                        <div class="col-sm-12 col-lg-12 px-3 py-2"><a class="link-own" href="#">Impressum</a></div>
-                        <div class="col-sm-12 col-lg-12 px-3 py-2"><a class="link-own" href="#">Rechtliche Hinweise</a></div>
-                        <div class="col-sm-12 col-lg-12 px-3 py-2"><a class="link-own" href="#">Datenschutz</a></div>
+                        <div class="col-sm-12 col-lg-12 px-3 py-2"><a class="link-own" href="..\website\impressum.html">Impressum</a></div>
+                        <div class="col-sm-12 col-lg-12 px-3 py-2"><a class="link-own" href="..\website\rechtlicheHinweise.html">Rechtliche Hinweise</a></div>
+                        <div class="col-sm-12 col-lg-12 px-3 py-2"><a class="link-own" href="..\website\datenschutz.html">Datenschutz</a></div>
                     </nav>
             </div>
         </footer>
