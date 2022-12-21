@@ -142,3 +142,17 @@
     pointer-events: none;
     cursor: default;
   }
+
+  header {
+    width: 100%;
+    background-image: url("../img/industry-gaae6eb33a_1920.jpg");
+    border-top: 0.2rem solid black;
+    border-bottom: 0.2rem solid black;
+  }
+
+  footer {
+    width: 100%;
+    background-image: url("../img/forest-gcce27dc61_1920.jpg");
+    border-top: 0.2rem solid black;
+    border-bottom: 0.2rem solid black; 
+  }

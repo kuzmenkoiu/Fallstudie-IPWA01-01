@@ -3,6 +3,7 @@
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.3",
     "jquery": "^3.6.1",
+    "react-bootstrap": "^2.7.0",
     "rtlcss": "^4.0.0",
     "sass": "^1.56.1"
   },

@@ -5,52 +5,29 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Aktuelle CO²-Emissionswerte</title>
         <link rel="stylesheet" href="..\node_modules\bootstrap\dist\css\bootstrap.rtl.min.css">
-        <link rel="stylesheet" href="..\css\bootstrap.css">
+        <link rel="stylesheet" href="..\node_modules\bootstrap\dist\css\bootstrap.min.css">
         <link rel="stylesheet" href="..\css\style.css">
-        <style>
-            header {
-                width: 100%;
-                background-image: url("../img/industry-gaae6eb33a_1920.jpg");
-                border-top: 0.2rem solid black;
-                border-bottom: 0.2rem solid black;
-            }
-
-            footer {
-                width: 100%;
-                background-image: url("../img/forest-gcce27dc61_1920.jpg");
-                border-top: 0.2rem solid black;
-                border-bottom: 0.2rem solid black; 
-            }
-        </style>
     </head>
-    <body onload=menüausrichtung()>
+    <body>
         <header id="start">
             <div class="container-fluid">
-                <div class="row navbar justify-content-betrween">
-                    <div class="navbar col-sm-12 col-lg-3 px-5">
-                        <img src="..\img\Logo.png" class="py-2" height="100" width="100" class="img-fluid" alt="Bild fehlerhaft">
-                        <text class="ueberschriftenklein px-2">Ökostream</text>
+                <div class="navbar">
+                    <div class="navbar col-sm-12 col-lg-4 justify-content-start">
+                        <img src="..\img\Logo.png" height="100" width="100" class="img-fluid mx-2">
+                        <text class="ueberschriftenklein">Emissionswerte</text>
                     </div>
-                    <div class="col-sm-12 col-lg-6 px-1">
-                        <nav class="navbar">
-                            <ul class="nav">
-                                <li class="d-inline col-sm-4 col-lg-2 px-3"><a class="nav-design" href="..\website\startseite.html">Startseite</a></li>
-                                <li class="d-inline col-sm-4 col-lg-2 px-4"><a class="nav-design" href="..\website\index.html">Ökostream</a></li>
-                                <li class="d-inline col-sm-4 col-lg-2 px-3"><a class="nav-design" href="..\website\kontakt.html">Kontakte</a></li>
-                                <li class="d-inline col-sm-4 col-lg-6 px-3">
-                                    <form class="d-flex" role="search">
-                                        <input class="form-control me-2" type="search" placeholder="Suchen" aria-label="Search">
-                                        <button class="btn btn-outline-own" type="submit">Suchen</button>
-                                    </form>
-                                </li>
-                            </ul>
-                        </nav>
+                    <div class="navbar col-sm-12 col-lg-5 justify-content-center">
+                        <ul class="nav">
+                            <li class="col-sm-12 col-md-4 col-lg-4 px-3"><a class="nav-design" href="..\website\startseite.html">Startseite</a></li>
+                            <li class="col-sm-12 col-md-4 col-lg-4 px-3"><a class="nav-design" href="..\website\index.html">Emissionen</a></li>
+                            <li class="col-sm-12 col-md-4 col-lg-4 px-3"><a class="nav-design" href="..\website\kontakt.html">Kontakte</a></li>
+                        </ul>
                     </div>
-                    <div class="col-sm-12 col-lg-3 px-5">
-                        <ul class="nav justify-content-end">
-                            <li class="d-inline col-sm-4 col-lg-3 px-4"><a class="nav-link" href="https://de-de.facebook.com/"><img src="..\img\facebook.png" alt="Facebook" width="40" height="40"></a></li>
-                            <li class="d-inline col-sm-4 col-lg-3 px-4"><a class="nav-link" href="https://www.instagram.com/"><img src="..\img\instagram.png" alt="Instagram" width="40" height="40"></a></li>
-                            <li class="d-inline col-sm-4 col-lg-3 px-4"><a class="nav-link" href="https://twitter.com/"><img src="..\img\twitter.png" alt="Twitter" width="40" height="40"></a></li>
+                    <div class="navbar col-sm-12 col-lg-3 justify-content-end">
+                        <ul class="nav">
+                            <li class="col-sm-4 col-lg-3 px-3"><a class="nav-link" href="https://de-de.facebook.com/"><img src="..\img\facebook.png" alt="Facebook" width="40" height="40"></a></li>
+                            <li class="col-sm-4 col-lg-3 px-3"><a class="nav-link" href="https://www.instagram.com/"><img src="..\img\instagram.png" alt="Instagram" width="40" height="40"></a></li>
+                            <li class="col-sm-4 col-lg-3 px-3"><a class="nav-link" href="https://twitter.com/"><img src="..\img\twitter.png" alt="Twitter" width="40" height="40"></a></li>
                         </ul>
                     </div>
                 </div>
@@ -59,71 +36,71 @@
         <main>
             <div class="dropdown hintergrund sticky-top"  id="menüplatzierung">
             </div>
-            <div class="container-fluid hintergrund">
-                <div class="container-fluid ueberschrift">
-                    Auf dieser Webseite sind Länder und Unternehmen mit ihren Emissionswerten aufgelistet
-                </div>
+            <div class="container-fluid hintergrund ueberschrift">
+                Auf dieser Webseite sind Länder und Unternehmen mit ihren Emissionswerten aufgelistet
             </div>
-            <div class="container-fluid" id="start">
-                <div class="row hintergrund">
-                    <div class="col-sm-12 col-lg-3 px-2 py-2">
-                        <input type="text" class="form-control" id="formGroupExampleInput1" placeholder="Filterwert eintragen">
+            <div>
+                <div class="container-fluid" id="start">
+                    <div class="row hintergrund">
+                        <div class="col-sm-12 col-lg-3 px-2 py-2">
+                            <input type="text" class="form-control" id="formGroupExampleInput1" placeholder="Filterwert eintragen">
+                        </div>
+                        
+                        <div class="col-sm-12 col-lg-3 px-2 py-2">
+                            <select class="form-select sortieroption" aria-label="Default select example">
+                                <option selected>Sortieroption wählen</option>
+                                <option value="A bis Z">A bis Z</option>
+                                <option value="Z bis A">Z bis A</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-12 col-lg-3 px-2 py-2">
+                            <select class="form-select sortierwert" aria-label="Default select example">
+                                <option selected>Sortierwert</option>
+                                <option value="Land">Land</option>
+                                <option value="Unternehmen">Unternehmen</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-12 col-lg-2 px-2 py-2">
+                            <Button class="btn btn-own"><a class="linkdesign" id="tabelleladen">Sortieren oder Filtern</a></Button>
+                        </div>
                     </div>
-                    <div class="col-sm-12 col-lg-1 px-2 py-1">
-                        <Button class="btn btn-own"><a class="linkdesign" href="javascript:location.reload()">Filtern</a></Button>
-                    </div>
-                    <div class="col-sm-12 col-lg-3 px-2 py-2">
-                        <select class="form-select sortieroption" aria-label="Default select example">
-                            <option selected>Sortieroption wählen</option>
-                            <option value="A bis Z">A bis Z</option>
-                            <option value="Z bis A">Z bis A</option>
-                          </select>
-                    </div>
-                    <div class="col-sm-12 col-lg-3 px-2 py-2">
-                        <select class="form-select sortierwert" aria-label="Default select example">
-                            <option selected>Sortierwert</option>
-                            <option value="Land">Land</option>
-                            <option value="Unternehmen">Unternehmen</option>
-                          </select>
-                    </div>
-                    <div class="col-sm-12 col-lg-1 px-2 py-2">
-                        <Button class="btn btn-own"><a class="linkdesign" href="javascript:location.reload()">Sortieren</a></Button>
+                    <div class="table-responsive col-sm-12 col-lg-12">
+                        <template  id="tabellenzeilen-temp">
+                            <tr id="Tabellennode">
+                                <td class="land"></td>
+                                <td class="unternehmen"></td>
+                                <td class="emission"></td>
+                            </tr>
+                        </template>
+                        <table class="table table-striped"  id="tabelle">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th scope="col">Land</th>
+                                    <th scope="col">Unternehmen</th>
+                                    <th scope="col">Emissionswert kT/Jahr</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-group-divider" id="tabellenzeile">
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-                <div class="table-responsive col-sm-12 col-lg-12">
-                    <template  id="tabellenzeilen-temp">
-                        <tr>
-                            <td class="land"></td>
-                            <td class="unternehmen"></td>
-                            <td class="emission"></td>
-                        </tr>
-                    </template>
-                    <table class="table table-striped"  id="tabelle">
-                        <thead class="table-dark">
-                            <tr>
-                                <th scope="col">Land</th>
-                                <th scope="col">Unternehmen</th>
-                                <th scope="col">Emissionswert kT/Jahr</th>
-                            </tr>
-                        </thead>
-                        <tbody class="table-group-divider" id="tabellenzeile">
-                        </tbody>
-                    </table>
-                  </div>
             </div>
         </main>
         <footer id="ende">
             <div class="container-fluid">
-                    <nav class="navbar">
-                        <div class="col-sm-12 col-lg-12 px-3 py-2"><a class="link-own" href="..\website\impressum.html">Impressum</a></div>
-                        <div class="col-sm-12 col-lg-12 px-3 py-2"><a class="link-own" href="..\website\rechtlicheHinweise.html">Rechtliche Hinweise</a></div>
-                        <div class="col-sm-12 col-lg-12 px-3 py-2"><a class="link-own" href="..\website\datenschutz.html">Datenschutz</a></div>
-                    </nav>
+                <div class="col-lg-2">
+                    <ul class="nav">
+                        <li class="col-sm-12 px-3 py-1"><a class="link-own" href="..\website\impressum.html">Impressum</a></li>
+                        <li class="col-sm-12 px-3 py-1"><a class="link-own" href="..\website\rechtlicheHinweise.html">Rechtliche Hinweise</a></li>
+                        <li class="col-sm-12 px-3 py-1"><a class="link-own" href="..\website\datenschutz.html">Datenschutz</a></li>
+                    </ul>
+                </div>
             </div>
         </footer>
     <script src="..\node_modules\@popperjs\core\dist\umd\popper.min.js"></script>
     <script src="..\node_modules\bootstrap\dist\js\bootstrap.min.js"></script>   
-    <script src="..\js\Menüausrichtung.js"></script>
-    <script src="..\js\Datenübertragung.js"></script>
+    <script src="..\js\menüausrichtung.js"></script>
+    <script src="..\js\datenladen.js"></script>
     </body>
 </html>
